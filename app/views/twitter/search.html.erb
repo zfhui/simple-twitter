@@ -11,22 +11,27 @@
     </div>
   </fieldset>
 <% end %>
-<p>
-  To see a list of possible parameters for the search field, please see <a class="pure-link" href="https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html">this site</a>.
-<p>
-<% if @tweets.present? %>
-  <table class="pure-table pure-table-horizontal stretch">
-    <thead>
-      <tr>
-        <th><%= "Search Result for: #{@query}" %></th>
+
+<p>To see a list of possible parameters for the search field, please see <a class="pure-link" href="https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html">this site</a>.
+<p>Here is an example search query: <em>q=#adjust&lang=en&count=5&result_type=recent</em>
+
+<table class="pure-table pure-table-horizontal stretch">
+  <thead>
+    <tr>
+      <th><%= "Search Result for: #{@query}" %></th>
     </tr>
-    </thead>
-    <tbody>
+  </thead>
+  <tbody>
+    <% if @tweets.present? %>
       <% @tweets.each do |tweet| %>
         <tr>
           <td><%= tweet.text %></td>
         </tr>
       <% end %>
-    </tbody>
-  </table>
-<% end %>
+    <% else %>
+      <tr>
+        <td>No results</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

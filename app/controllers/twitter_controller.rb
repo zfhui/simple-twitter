@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class TwitterController < ApplicationController
-  before_action :search_query
-
   def search
     @tweets = TwitterSearchService.new(search_query).search
   end
