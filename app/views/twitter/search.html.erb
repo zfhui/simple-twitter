@@ -1,10 +1,9 @@
+<h1>Simple Twitter Search</h1>
 <%= form_tag('/twitter_search', method: 'get', class: 'pure-form') do %>
   <fieldset>
-    <legend>Standard Twitter Search</legend>
-
     <div class="pure-g">
       <div class="pure-u-1-1 pure-u-md-3-4">
-        <%= text_field_tag(:q, @q, placeholder: 'Search Term...') %>
+        <%= text_field_tag(:search_query, @query, placeholder: 'Search Term...') %>
       </div>
       <div class="pure-u-1-1 pure-u-md-1-4">
         <%= submit_tag('Search', class: 'pure-button pure-button-primary stretch') %>
@@ -13,11 +12,13 @@
   </fieldset>
 <% end %>
 <p>
+  To see a list of possible parameters for the search field, please see <a class="pure-link" href="https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html">this site</a>.
+<p>
 <% if @tweets.present? %>
   <table class="pure-table pure-table-horizontal stretch">
     <thead>
       <tr>
-        <th><%= "Search Result for: #{@q}" %></th>
+        <th><%= "Search Result for: #{@query}" %></th>
     </tr>
     </thead>
     <tbody>
