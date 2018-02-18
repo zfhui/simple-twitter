@@ -1,9 +1,25 @@
-<%= form_tag('/twitter_search', method: 'get') do %>
-  <%= label_tag(:q, 'Search Twitter for:') %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag('Search') %>
+<%= form_tag('/twitter_search', method: 'get', class: 'pure-form') do %>
+  <fieldset>
+    <legend>Search Twitter ... </legend>
+
+      <%= text_field_tag(:q, nil, placeholder: params[:q] || 'Search Term...' ) %>
+      <%= submit_tag('Search', class: 'pure-button pure-button-primary') %>
+  </fieldset>
 <% end %>
 
-<% @tweets.each do |tweet| %>
-  <%= tweet.text %>
-<% end %>
+<table class="pure-table pure-table-horizontal">
+  <thead>
+    <tr>
+      <th><%= "Search Result for #{params[:q] || ''}" %></th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td>
+          <%= tweet.text %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
