@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project implements a simple Twitter search with the [twitter gem](https://github.com/sferik/twitter), which uses Twitter's [Standard Search API](https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets).
 
-Things you may want to cover:
+> Please note that Twitter’s search service and, by extension, the Search API is not meant to be an exhaustive source of Tweets. Not all Tweets will be indexed or made available via the search interface. - [Source](https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html)
 
-* Ruby version
+## Development 
+### Setup Rails
 
-* System dependencies
+```shell
+# Install Ruby 2.5.0 via RVM
+$ rvm install 2.5.0
 
-* Configuration
+# Install bundler
+$ gem install bundler
 
-* Database creation
+# Install all gems
+$ bundler install
+```
 
-* Database initialization
+### Setup Twitter Development App
+Change the `.env.sample` file to `.env` and either keep the credentials (which were created for this experiment) or setup a new [Twitter App](https://apps.twitter.com/), create a new Access Token and replace those in the `.env` file. 
 
-* How to run the test suite
+### Run the App locally
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+$ rails s
+```
 
-* Deployment instructions
-
-* ...
+Now visit [http://0.0.0.0:3000](http://0.0.0.0:3000) in your favourite browser. 
