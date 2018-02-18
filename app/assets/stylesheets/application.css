@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .stretch{
+   width:100%;
+ }
+
+ input[type="text"]{
+    width:98%;
+ }
