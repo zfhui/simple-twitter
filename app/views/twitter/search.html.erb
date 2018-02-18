@@ -1,0 +1,9 @@
+<%= form_tag('/twitter_search', method: 'get') do %>
+  <%= label_tag(:q, 'Search Twitter for:') %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag('Search') %>
+<% end %>
+
+<% @tweets.each do |tweet| %>
+  <%= tweet.text %>
+<% end %>
