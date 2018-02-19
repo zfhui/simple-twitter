@@ -15,7 +15,7 @@ $ rvm install 2.5.0
 $ gem install bundler
 
 # Install all gems
-$ bundler install
+$ bundle install
 ```
 
 ### Setup Twitter Development App
@@ -39,11 +39,17 @@ Now visit [http://0.0.0.0:3000](http://0.0.0.0:3000) in your favourite browser.
 $ rspec .
 ```
 
+## Deployment 
+
+Continues integration via Travis CI is setup. It also deploys the code to Heroku automatically. 
+
+Visit: [https://simple-twitter-search.herokuapp.com](https://simple-twitter-search.herokuapp.com)
+
 ## Statuses
 
-|Tool  |           Deployment           |  Travis CI  |Code Quality|
-|------|--------------------------------|-------------|------------|
-|**Status**| N.N. |[![Build Status](https://travis-ci.org/zfhui/simple-twitter.svg?branch=master)](https://travis-ci.org/zfhui/simple-twitter)|[![Maintainability](https://api.codeclimate.com/v1/badges/a6c6555291a84a6ce7e5/maintainability)](https://codeclimate.com/github/zfhui/simple-twitter/maintainability)|
+|Tool  | Travis CI/CD  | Code Climate |
+|------|---------------|--------------|
+|**Status**|[![Build Status](https://travis-ci.org/zfhui/simple-twitter.svg?branch=master)](https://travis-ci.org/zfhui/simple-twitter)|[![Maintainability](https://api.codeclimate.com/v1/badges/a6c6555291a84a6ce7e5/maintainability)](https://codeclimate.com/github/zfhui/simple-twitter/maintainability)|
 
 ## 🌟 Ideas for improvements
 * cache search query (e.g. via Redis), because currently each request can take quite long
