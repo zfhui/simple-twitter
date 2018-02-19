@@ -1,3 +1,9 @@
 language: ruby
 rvm:
- - 2.5.0
+- 2.5.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: kW8i64fbbHUOhTDLuz+/ulEKzGUapZQvGEmkAxAhHT7jhn621+G1R7C5jQCrz5Y4QSb+ucp5WoCw1y85UIULIBpojDGFEvb5ojN0wyybM9Sg5nQhQae2CiId373EANW/aOpSHriXOyQGgoumr3scCDr5lZbsPNybrS0KraLJDWnvYS7mz1OYmeyrs/hf+D5HvffO4hnjKu1cKtS8J+SOPdtQleswj8Ux4/d9KsdoeY0/BmpB1F59CwcTXcPnTib4SY5zeqolS5SlJCwfVO0z8kE0uBM0JvovVq7JRgJCXNxY5mYKITGJSQmEtYkPrQ8q/CFJVTL8jFqa1aj9fOMRxSxkZezcl0mSjNxQ+CEY9woCu1W6CA3ISOpG68U0dgIYz3xW0D4aNJ9gtcorK7cwFyJwLj3NOVCWQuHaubHXHWzF3GESUEWTuBFmoTns4T0IyTUcVrD7Q+dO9Qlats5cEsSbMyE5Fhx9MyIfkekPo/DjAyogXRO5FQomQO3+WySLNSuq+yZwPqih/h0fW0O/Rp72JfS0th3WJdRRyRUEpa4bwi2zGJR5osfx9uEN5yhxL4t0lgdHQln1ZEXJhE4knBpk/pqI1vWUwxKHOw6JYr/xzKlxb5MSNgWeTOZKRztWPkCOgwc7f+dudYiSjnPpfDxvFKvhekiNYJW0jthFrds=
+  app:
+    master: simple-twitter-search
