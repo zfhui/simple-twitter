@@ -22,7 +22,7 @@ $ bundle install
 Change the `.env.sample` file to `.env` and either keep the credentials (which were created for this experiment) or setup a new [Twitter App](https://apps.twitter.com/), create a new Access Token and replace those in the `.env` file. 
 
 ### CSS Framework
-This project uses the light-weight weight, responsive CSS framework [Pure](https://purecss.io) for styling the very basic elements in the views. The framework is service via a CDN. 
+This project uses the light-weight, responsive CSS framework [Pure](https://purecss.io) for styling the very basic elements in the views. The framework is served via a CDN. 
 
 ### Run the App locally
 
