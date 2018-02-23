@@ -11,21 +11,22 @@ describe TwitterSearchService, :vcr do
     end
 
     context 'query does not contain param q' do
-      let(:query) { '#adjust' }
+      let(:query) { '#ruby25th' }
 
       it { expect(service.search).to be_empty }
     end
 
     context 'query only contains param q' do
-      let(:query) { 'q=adjust' }
+      let(:query) { 'q=#ruby25th' }
 
       it { expect(service.search).to be_a(Twitter::SearchResults) }
     end
 
     context 'complex query' do
-      let(:query) { 'q=adjust&lang=en&count=5&result_type=recent' }
+      let(:query) { 'q=#ruby25th&lang=en&count=5&result_type=recent' }
 
-      it { expect(service.search).to be_a(Twitter::SearchResults) }
+      it { expect(service.search).to all(be_a(Twitter::Tweet)) }
+      it { expect(service.search.count).to eq 5 }
     end
   end
 end
